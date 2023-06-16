@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -14,18 +20,62 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+  background-color: #f2f2f2;
+}
+
+.page-container {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-color: #fff;
   color: #000;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 /*Главная страница*/
 
 /*Стили хедер*/
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.page-navigation {
+  margin: 0;
+  padding: 0;
+  padding-left: 70px;
+  width: 507px;
+}
+
+.page-navigation .navigation-item {
+  margin: 0;
+  padding: 0;
+}
+
+.user-menu {
+  max-width: 268px;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 70px;
+}
+
 .navigation-link {
   font-weight: 700;
   font-size: 20px;
@@ -48,16 +98,35 @@ body {
 .block-hero {
   background-image: url(../images/index_background.jpg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+}
+
+.welcome-title {
+  display: flex;
+  flex-direction: column;
+  width: 458px;
+  margin: 0 auto;
 }
 
 /*Преимущества*/
+.advantages-list {
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-list .advantages-item {
+  margin: 0;
+  padding: 0;
+}
+
 .advantages h2 {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  width: 620px;
+  margin: 0 auto;
 }
 
 .advantages,
@@ -82,6 +151,23 @@ body {
   color: #333;
 }
 
+.advantages-list li:first-child {
+  display: flex;
+}
+
+.advantages-list .without-image {
+  display: flex;
+}
+
+.advantages-list li:last-child {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.advantages-item-blue h3 {
+  color: #fff;
+}
+
 .advantages-item-blue p {
   color: #fff;
 }
@@ -100,12 +186,24 @@ body {
 }
 
 /*Сервисы*/
+.service-list {
+  display: flex;
+}
+
+.service-list .service-item {
+  margin: 0;
+  padding: 0;
+}
+
 .service h2 {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  width: 505px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service h3 {
@@ -124,7 +222,11 @@ body {
 }
 
 /*Заказ гостиницы*/
-.search-hotel b {
+.search-hotel {
+  text-align: center;
+}
+
+.search-hotel h2 {
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -150,11 +252,16 @@ body {
 
 /*Подпись на рассылку*/
 
+.mailing,
+.inner-mailing {
+  text-align: center;
+  color: #fff;
+}
+
 .mailing {
   background-image: url(../images/subscribe_background.png);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  color: #fff;
 }
 
 .mailing b {
@@ -185,6 +292,12 @@ body {
 }
 
 /*Футер*/
+.footer-container {
+  padding-left: 70px;
+  padding-right: 70px;
+  display: flex;
+}
+
 .page-footer,
 .inner-footer {
   background-color: #fff;
@@ -197,19 +310,36 @@ body {
   color: #000;
 }
 
+.page-footer .social-network,
+.inner-footer .social-network {
+  min-width: 142px;
+}
+
+.social-network li {
+  margin: 0;
+  padding: 0;
+}
+
 .page-footer .phone,
 .inner-footer .phone {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
+  width: 331px;
+}
+
+.page-footer .academy-site,
+.inner-footer .academy-site {
+  width: 115px;
 }
 
 /*Страница каталога*/
 /*Фильтрация*/
 .inner-head {
+  display: flex;
   background-image: url(../images/catalog/catalog_background.png);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   color: #fff;
 }
 
@@ -249,6 +379,11 @@ body {
 }
 
 /*Галерея*/
+.results {
+  display: flex;
+  padding: 0 70px;
+}
+
 .gallery h2 {
   font-size: 30px;
   line-height: 36px;
@@ -260,6 +395,15 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333;
+}
+
+.hotels-list {
+  padding: 0 70px;
+}
+
+.hotels-list .hotel-card {
+  margin: 0;
+  padding: 0;
 }
 
 .hotels-list b {
@@ -311,6 +455,11 @@ body {
 }
 
 /*Пагинация*/
+.gallery-pagination {
+  display: flex;
+  padding: 0 70px;
+}
+
 .gallery-pagination a {
   font-size: 20px;
   line-height: 36px;
