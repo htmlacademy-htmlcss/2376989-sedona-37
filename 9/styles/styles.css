@@ -683,7 +683,6 @@ body {
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
-  font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -694,13 +693,12 @@ body {
 /*Форма брони*/
 
 .auth-form {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .date-field {
-  margin-bottom: 4px;
+  margin-bottom: 23px;
 }
 
 .date-field input {
@@ -709,13 +707,9 @@ body {
   background-position: top 16px right 17px;
 }
 
-.field-in span {
-  margin-right: 24px;
-}
-
-.field-in p {
+.field-in .prompt {
   margin: 0;
-  margin: 4px 140px 23px 145px;
+  margin: 4px 140px 23px 150px;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -723,13 +717,9 @@ body {
   color: #ff5757;
 }
 
-.field-out span {
-  margin-right: 18px;
-}
-
-.field-out p {
+.field-out .prompt {
   margin: 0;
-  margin: 4px 100px 23px 137px;
+  margin: 4px 95px 23px 150px;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -739,17 +729,30 @@ body {
 }
 
 .date-field input {
+  margin-left: 20px;
   width: 440px;
   border: none;
   border-radius: 4px;
   outline: none;
 }
 
+.field-in input {
+  margin-left: 25px;
+}
+
 .ticket-field {
+  display: flex;
+}
+
+.ticket-field span {
+  align-self: center;
+}
+
+.counting-field {
   position: relative;
 }
 
-.ticket-field .ticket-button {
+.counting-field .ticket-button {
   position: absolute;
   border: none;
   cursor: pointer;
@@ -785,7 +788,7 @@ body {
 }
 
 .kids-counting span {
-  margin-right: 82px;
+  margin-right: 90px;
 }
 
 .kids-counting .tooltip-icon {
@@ -798,6 +801,8 @@ body {
 .tooltip-text {
   display: none;
   position: absolute;
+  top: 50px;
+  left: 2px;
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
@@ -1579,4 +1584,8 @@ input::-webkit-inner-spin-button {
 .inner-mailing input {
   font-size: 18px;
   line-height: 24px;
+}
+
+.display-none {
+  display: none;
 }
