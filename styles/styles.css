@@ -181,6 +181,7 @@ body {
 
 /*Стили контента*/
 .block-hero {
+  background-color: #6495ed;
   background-image: url(../images/index_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -441,6 +442,8 @@ body {
 }
 
 .search-hotel .search {
+  display: inline-block;
+  text-decoration: none;
   background-color: #756157;
   padding: 8px 50px;
   font-family: inherit;
@@ -478,6 +481,7 @@ body {
 }
 
 .mailing {
+  background-color: #6495ed;
   background-image: url(../images/subscribe_background.png);
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -969,6 +973,7 @@ input::-webkit-inner-spin-button {
 /*Страница каталога*/
 /*Фильтрация*/
 .inner-head {
+  background-color: #6495ed;
   background-image: url(../images/catalog/catalog_background.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1087,8 +1092,12 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
+.control:focus-within .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
 .control:active .control-mark {
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
